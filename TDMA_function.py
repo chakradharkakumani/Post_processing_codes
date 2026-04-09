@@ -18,7 +18,7 @@ def TDMA_function(Coeffiecient_A, Coeffiecient_B, Coeffiecient_C, Coeffiecient_D
         if i == 0:
             C2[i] = C[i] / B[i]
             D2[i] = D[i] / B[i]
-        elif i < n-1:
+        elif 0 < i < n-1:
             C2[i] = C[i] / (B[i] - A[i]*C2[i-1])
             D2[i] = (D[i] - A[i]*D2[i-1]) / (B[i] - A[i]*C2[i-1])
         else:
